@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Morrowind Class Quiz: questions{% endblock %}
+
+{% block content %}
+    {% for question in questions %}
+        <p>{{ question["question"] }}</p>
+            <ul>
+                <p><li>{{ question["answers"][0][0] }}</li></p>
+                <p><li>{{ question["answers"][1][0] }}</li></p>
+                <p><li>{{ question["answers"][2][0] }}</li></p>
+        </ul>
+        <p></p>
+        <p></p>
+    {% endfor %}
+{% endblock %}
