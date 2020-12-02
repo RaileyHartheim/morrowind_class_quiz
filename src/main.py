@@ -1,16 +1,23 @@
+import os
+
 from flask import Flask, render_template, request
 from quiz import Quiz
-app = Flask(__name__)
+from class_description import ClassDescription
+app = Flask(__name__, static_folder=os.path.join(os.getcwd(), "static"))
 
 quiz = Quiz()
+class_information = ClassDescription()
 
-@app.route("/questions")
-def show_all_text():
-    return render_template('questions.html', questions=quiz.quiz_data)
-
-@app.route("/progress")
+@app.route("/progress", methods=["GET", "POST"])
 def show_quiz():
-    return render_template('progress.html', questions=quiz.quiz_data)
+    if request.method == "GET":
+        return render_template('progress.html', questions=quiz.quiz_data)
+    elif request.method == "POST":
+        user_answers = request.form.to_dict()
+        chosen_class = quiz.get_results(user_answers)
+        return render_template('results.html', result=chosen_class, information=class_information.description)
+
 
 if __name__ == "__main__":
     app.run()
+

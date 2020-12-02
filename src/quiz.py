@@ -145,11 +145,11 @@ class Quiz:
         magic = 0
         stealth = 0
         for i, j in answer_data.items():
-            if self.quiz_data[i]["answers"][j][1] == "Combat":
+            if self.quiz_data[int(i)]["answers"][int(j)][1] == "Combat":
                 combat += 1
-            elif self.quiz_data[i]["answers"][j][1] == "Magic":
+            elif self.quiz_data[int(i)]["answers"][int(j)][1] == "Magic":
                 magic += 1
-            elif self.quiz_data[i]["answers"][j][1] == "Stealth":
+            elif self.quiz_data[int(i)]["answers"][int(j)][1] == "Stealth":
                 stealth += 1
         class_result = self.get_class_by_params(combat, magic, stealth)
         return class_result

@@ -3,14 +3,15 @@
 {% block title %}Morrowind Class Quiz: To the questions{% endblock %}
 
 {% block content %}
+    <form action="/progress" method="POST">
     {% for question in questions %}
-        <form method="POST">
-            <p>{{ question['question'] }}</p>
-            <p><input type="radio" name="{{ question['question_number'] }}" value=0>{{ question['answers'][0][0] }}</p>
-            <p><input type="radio" name="{{ question['question_number'] }}" value=1>{{ question['answers'][1][0] }}</p>
-            <p><input type="radio" name="{{ question['question_number'] }}" value=2>{{ question['answers'][2][0] }}</p>
-            <p></p>
-            <p></p>
-        </form>
+        <p>{{ question['question'] }}</p>
+        <p><input type="radio" name="{{ question['question_number'] }}" value=0>{{ question['answers'][0][0] }}</p>
+        <p><input type="radio" name="{{ question['question_number'] }}" value=1>{{ question['answers'][1][0] }}</p>
+        <p><input type="radio" name="{{ question['question_number'] }}" value=2>{{ question['answers'][2][0] }}</p>
+        <p></p>
+        <p></p>
     {% endfor %}
+    <input type=submit value="To the results">
+    </form>
 {% endblock %}

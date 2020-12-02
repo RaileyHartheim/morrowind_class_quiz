@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Congratulations!</h3>
+    <p>Your result is... {{ result }}!</p>
+    <p><img src="static/images/{{ result }}.jpg"></p>
+    <p>{{ information[result]["Description"] }}</p>
+    <p>Specialization: {{ information[result]["Specialization"] }}</p>
+    <p>Attributes: {{ information[result]["Attributes"] }}</p>
+    <p><table>
+        <tr>
+            <td><p>Major skills:</p>
+                <ul>{% for majorskill in information[result]["Major skills"] %}
+                    <p><li>{{majorskill}}</li></p>
+                {% endfor %}</ul>
+            </td>
+            <td><p>Minor skills:</p>
+                <ul>{% for minorskill in information[result]["Minor skills"] %}
+                    <p><li>{{minorskill}}</li></p>
+                {% endfor %}</ul>
+            </td>
+        </tr>
+    </table></p>
+    <p><table>
+        <tr>
+            <td><p>Spells:</p>
+            <ul>{% for spell in information[result]["Spells"] %}
+                <p><li>{{ spell }}</li></p>
+            {% endfor %}</ul>
+        </td>
+        </tr>
+    </table></p>
+
+
+{% endblock %}
+
