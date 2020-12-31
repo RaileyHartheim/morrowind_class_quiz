@@ -1,36 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h3>Congratulations!</h3>
-    <p>Your result is... {{ result }}!</p>
+    <div class="headers"><h2>Congratulations!</h2></div>
+    <div class="results-text"><p>Your result is... {{ result }}!</p>
     <p><img src="static/images/{{ result }}.jpg"></p>
     <p>{{ information[result]["Description"] }}</p>
     <p>Specialization: {{ information[result]["Specialization"] }}</p>
-    <p>Attributes: {{ information[result]["Attributes"] }}</p>
+    <p>Attributes: {{ information[result]["Attributes"] }}</p></div>
     <p><table>
         <tr>
-            <td><p>Major skills:</p>
+            <td><div class="table-header"><p>Major skills:</p></div>
                 <ul>{% for majorskill in information[result]["Major skills"] %}
-                    <p><li>{{majorskill}}</li></p>
+                    <p><li type="circle">{{majorskill}}</li></p>
                 {% endfor %}</ul>
             </td>
-            <td><p>Minor skills:</p>
+            <td><div class="table-header"><p>Minor skills:</p></div>
                 <ul>{% for minorskill in information[result]["Minor skills"] %}
-                    <p><li>{{minorskill}}</li></p>
+                    <p><li type="circle">{{minorskill}}</li></p>
                 {% endfor %}</ul>
             </td>
         </tr>
     </table></p>
     <p><table>
         <tr>
-            <td><p>Spells:</p>
+            <td><div class="table-header"><p>Spells:</p></div>
             <ul>{% for spell in information[result]["Spells"] %}
-                <p><li>{{ spell }}</li></p>
+                <p><li type="circle">{{ spell }}</li></p>
             {% endfor %}</ul>
         </td>
         </tr>
     </table></p>
 
 
+    <div class="buttons"><form action="/greeting">
+        <button>Back to the greeting page</button>
+    </form></div>
 {% endblock %}
 

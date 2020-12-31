@@ -3,15 +3,14 @@
 {% block title %}Morrowind Class Quiz: To the questions{% endblock %}
 
 {% block content %}
+    <div class="headers"><h2>Choose one of three answers for each question.</h2></div>
     <form action="/progress" method="POST">
     {% for question in questions %}
-        <p>{{ question['question'] }}</p>
+        <div class="questions"><p>{{ question['question'] }}</p>
         <p><input type="radio" name="{{ question['question_number'] }}" value=0>{{ question['answers'][0][0] }}</p>
         <p><input type="radio" name="{{ question['question_number'] }}" value=1>{{ question['answers'][1][0] }}</p>
-        <p><input type="radio" name="{{ question['question_number'] }}" value=2>{{ question['answers'][2][0] }}</p>
-        <p></p>
-        <p></p>
+        <p><input type="radio" name="{{ question['question_number'] }}" value=2>{{ question['answers'][2][0] }}</p></div>
     {% endfor %}
-    <input type=submit value="To the results">
+    <div class="buttons"><input type=submit value="To the results"></div>
     </form>
 {% endblock %}

@@ -1,0 +1,53 @@
+body {
+    background: #030303;
+    background-size: 100%;
+    color: #caa560;
+    font-family: 'Macondo', cursive;
+}
+h2, h3 {
+    color: #802713;
+    font-family: 'Macondo', cursive;
+}
+button {
+    background: #5b1c0e;
+    color: #bb8772;
+    font-family: 'Macondo', cursive;
+    font-size: 14pt;
+}
+input[type=submit], input[type=button] {
+    background-color: #5b1c0e;
+    color: #bb8772;
+    font-family: 'Macondo', cursive;
+    font-size: 14pt;
+}
+.greeting-text {
+    text-align: justify;
+    text-indent: 15px;
+    font-size: 14pt;
+    margin: 0px 30px;
+}
+.questions {
+    text-align: justify;
+    text-indent: 15px;
+    font-size: 14pt;
+    margin: 0px 30px;
+    padding: 0px 0px 5px 0px;
+}
+.results-text {
+    text-align: center;
+    font-size: 14pt;
+    margin: 0px 30px;
+}
+table {
+    margin: auto;
+    font-size: 14pt;
+}
+.table-header {
+    text-indent: 10px;
+}
+.headers {
+    text-align: center;
+}
+.buttons {
+    text-align: center;
+}

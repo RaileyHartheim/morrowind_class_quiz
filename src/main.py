@@ -8,6 +8,11 @@ app = Flask(__name__, static_folder=os.path.join(os.getcwd(), "static"))
 quiz = Quiz()
 class_information = ClassDescription()
 
+@app.route("/")
+@app.route("/greeting")
+def show_greeting():
+    return render_template('greeting.html')
+
 @app.route("/progress", methods=["GET", "POST"])
 def show_quiz():
     if request.method == "GET":

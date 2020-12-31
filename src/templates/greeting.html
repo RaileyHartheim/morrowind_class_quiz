@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="headers"><h2>Greetings and well met, dear traveler!</h2></div>
+    <div class="greeting-text"><p>In The Elder Scrolls: Morrowind every humanoid character has a class, including player character and all NPCs. A character's class reflects their occupation, their position in society, or simply what sorts of things they are good at. In game terms, class comprises three different aspects of a character: Specialization, Favored Attributes, and Major/Minor Skills. Together, these choices have significant impact on the state of player character at the start of the game, as well as how they will develop as they increase in level.</p>
+    <p></p>
+    <p>One of the ways to choose player character's class at the start of the game is to allow Socucius Ergalla to give player a "personality test" of sorts. Player will be asked ten multiple-choice questions, and Socucius Ergalla will suggest the class that best fits given answers.</p>
+    <p></p>
+    <p>This quiz presents the same questions as in the game. You need to choose one or another answer for each question. The result will be given after clicking “To the results” button.</p>
+    <p></p>
+    <p>NOTE: the results shown may differ slightly from those obtained in the game! This was done on purpose for two reasons. Firstly, when passing the quiz in the game, you can’t get the Bard and Nightblade classes as a result. I made them available here. Secondly, some classes could correspond to 7 combinations of specializations and, accordingly, had more chances to drop out as a result, while other classes corresponded only one combination. I slightly changed the distribution of combinations: there is a smaller spread in the number of combinations per class, some of the classes have an increased drop rate.</p>
+    <p></p>
+    <p>If you have nothing against possible discrepancies in the results, you can safely proceed to the questions: for this you just need to click on the button below.</p></div>
+
+    <div class="buttons"><form action="/progress">
+        <button>To the questions</button>
+    </form></div>
+{% endblock %}
