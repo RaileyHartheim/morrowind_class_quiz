@@ -7,7 +7,7 @@
     <form action="/progress" method="POST">
     {% for question in questions %}
         <div class="questions"><p>{{ question['question'] }}</p>
-        <p><input type="radio" name="{{ question['question_number'] }}" value=0>{{ question['answers'][0][0] }}</p>
+        <p><input type="radio" name="{{ question['question_number'] }}" value=0 required oninvalid="this.setCustomValidity('Choose one of the answers.')">{{ question['answers'][0][0] }}</p>
         <p><input type="radio" name="{{ question['question_number'] }}" value=1>{{ question['answers'][1][0] }}</p>
         <p><input type="radio" name="{{ question['question_number'] }}" value=2>{{ question['answers'][2][0] }}</p></div>
     {% endfor %}

@@ -8,6 +8,10 @@ h2, h3 {
     color: #802713;
     font-family: 'Macondo', cursive;
 }
+.a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: #caa560;
+    font-family: 'Macondo', cursive;
+}
 button {
     background: #5b1c0e;
     color: #bb8772;
@@ -50,4 +54,17 @@ table {
 }
 .buttons {
     text-align: center;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+.container {
+    margin-top: 40px;
+    margin-bottom:20px;
+    margin-left: 35px;
+    margin-right: 35px;
 }

@@ -1,1 +1,2 @@
-# morrowind_class_quiz
+# Morrowind Class Quiz
+This quiz presents the same questions as in The Elder Scrolls: Morrowind to determine player character's class. You need to choose one or another answer for each question. The class result will be given after clicking “To the results” button.
